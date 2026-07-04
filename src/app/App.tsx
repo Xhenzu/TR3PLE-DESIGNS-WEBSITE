@@ -1475,7 +1475,7 @@ function AboutPage() {
       {/* ── 3. Mission ── */}
       <section
         className="py-28 px-6"
-        style={{ background: "#0d0d0d" }}
+        style={{ background: "var(--card)" }}
       >
         <div className="max-w-7xl mx-auto">
           <Reveal className="text-center mb-16">
@@ -1691,7 +1691,7 @@ function AboutPage() {
       {/* ── 5. Why Choose Us ── */}
       <section
         className="py-28 px-6"
-        style={{ background: "#0d0d0d" }}
+        style={{ background: "var(--card)" }}
       >
         <div className="max-w-7xl mx-auto">
           <Reveal className="text-center mb-16">
@@ -1867,7 +1867,7 @@ function ProjectLightbox({
             <button
               onClick={onClose}
               className="absolute -top-10 right-0 text-sm tracking-widest uppercase font-bold opacity-60 hover:opacity-100 transition-opacity"
-              style={{ fontFamily: SANS, color: "var(--foreground)" }}
+              style={{ fontFamily: SANS, color: "#f0ebe0" }}
             >
               ✕ close
             </button>
@@ -1928,7 +1928,7 @@ function ProjectLightbox({
                 </p>
                 <h3
                   className="text-xl font-bold"
-                  style={{ fontFamily: SANS, color: "var(--foreground)" }}
+                  style={{ fontFamily: SANS, color: "#f0ebe0" }}
                 >
                   {project.title}
                 </h3>
@@ -2028,7 +2028,7 @@ function TiltCard({
             </p>
             <h3
               className="text-xl font-bold"
-              style={{ fontFamily: SANS, color: "var(--foreground)" }}
+              style={{ fontFamily: SANS, color: "#f0ebe0" }}
             >
               {project.title}
             </h3>
@@ -2278,7 +2278,7 @@ function WorkPage() {
                 </div>
                 <div
                   className="p-5"
-                  style={{ background: "#111111" }}
+                  style={{ background: "var(--card)" }}
                 >
                   <p
                     className="tracking-[0.28em] uppercase mb-1"
@@ -2309,7 +2309,7 @@ function WorkPage() {
       {/* ── Stats ── */}
       <section
         className="py-24 px-6"
-        style={{ background: "#0d0d0d" }}
+        style={{ background: "var(--card)" }}
       >
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
           {STATS.map((s, i) => (
