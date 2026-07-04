@@ -43,6 +43,8 @@
   /* raw rgb triplets so inline rgba() overlays can react to theme */
   --bg-rgb: 247 245 240;
   --fg-rgb: 20 18 15;
+  /* lime accent text is too pale on a light page — use a dark green instead */
+  --accent-text: #3e6b12;
 }
 
 /* ── DARK THEME (.dark class) ─────────────────────────────────────────────── */
@@ -86,6 +88,7 @@
   /* raw rgb triplets so inline rgba() overlays can react to theme */
   --bg-rgb: 10 10 10;
   --fg-rgb: 240 235 224;
+  --accent-text: #b0f542;
 }
 
 /* smooth crossfade when switching themes */

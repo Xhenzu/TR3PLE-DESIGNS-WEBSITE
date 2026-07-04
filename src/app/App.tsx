@@ -482,6 +482,7 @@ const SOCIALS = [
 
 function Footer() {
   const go = useNav();
+  const { theme } = useTheme();
   return (
     <footer
       style={{
@@ -501,6 +502,9 @@ function Footer() {
                 src={logoImg}
                 alt="TR3PL Designs"
                 className="h-12 w-auto object-contain"
+                style={{
+                  filter: theme === "light" ? "invert(1)" : "none",
+                }}
               />
             </button>
             <p
@@ -631,6 +635,7 @@ function Footer() {
 // ─────────────────────────────────────────────────────────────────────────────
 function Nav({ cur }: { cur: Page }) {
   const go = useNav();
+  const { theme } = useTheme();
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-10 py-3.5"
@@ -670,6 +675,9 @@ function Nav({ cur }: { cur: Page }) {
           src={logoImg}
           alt="TR3PL Designs"
           className="h-14 w-auto object-contain"
+          style={{
+            filter: theme === "light" ? "invert(1)" : "none",
+          }}
         />
       </motion.button>
 
@@ -1265,7 +1273,7 @@ function AboutPage() {
             style={{
               fontFamily: SANS,
               fontSize: "0.6rem",
-              color: LIME,
+              color: "var(--accent-text)",
             }}
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
@@ -1351,7 +1359,7 @@ function AboutPage() {
               style={{
                 fontFamily: SANS,
                 fontSize: "0.6rem",
-                color: LIME,
+                color: "var(--accent-text)",
               }}
             >
               Who We Are
@@ -1441,7 +1449,7 @@ function AboutPage() {
                       style={{
                         fontFamily: "'Courier New', monospace",
                         fontSize: "0.62rem",
-                        color: LIME,
+                        color: "var(--accent-text)",
                       }}
                     >
                       0{i + 1}
@@ -1484,7 +1492,7 @@ function AboutPage() {
               style={{
                 fontFamily: SANS,
                 fontSize: "0.6rem",
-                color: LIME,
+                color: "var(--accent-text)",
               }}
             >
               Our Mission
@@ -1553,7 +1561,7 @@ function AboutPage() {
                 <div className="relative z-10">
                   <div
                     className="text-3xl mb-5"
-                    style={{ color: LIME }}
+                    style={{ color: "var(--accent-text)" }}
                   >
                     {card.sym}
                   </div>
@@ -1590,7 +1598,7 @@ function AboutPage() {
             style={{
               fontFamily: SANS,
               fontSize: "0.6rem",
-              color: LIME,
+              color: "var(--accent-text)",
             }}
           >
             Our Process
@@ -1661,7 +1669,7 @@ function AboutPage() {
                     style={{
                       fontFamily: SANS,
                       fontSize: "0.68rem",
-                      color: LIME,
+                      color: "var(--accent-text)",
                     }}
                   >
                     {step.num}
@@ -1700,7 +1708,7 @@ function AboutPage() {
               style={{
                 fontFamily: SANS,
                 fontSize: "0.6rem",
-                color: LIME,
+                color: "var(--accent-text)",
               }}
             >
               Why TR3PL
@@ -1740,7 +1748,7 @@ function AboutPage() {
               >
                 <motion.div
                   className="text-2xl mb-5"
-                  style={{ color: LIME }}
+                  style={{ color: "var(--accent-text)" }}
                   whileHover={{ scale: 1.32, rotate: 18 }}
                   transition={{
                     type: "spring",
@@ -1793,7 +1801,7 @@ function AboutPage() {
             style={{
               fontFamily: SANS,
               fontSize: "0.6rem",
-              color: LIME,
+              color: "var(--accent-text)",
             }}
           >
             Ready to build?
@@ -2091,7 +2099,7 @@ function WorkPage() {
             style={{
               fontFamily: SANS,
               fontSize: "0.6rem",
-              color: LIME,
+              color: "var(--accent-text)",
             }}
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
@@ -2161,7 +2169,7 @@ function WorkPage() {
             style={{
               fontFamily: SANS,
               fontSize: "0.6rem",
-              color: LIME,
+              color: "var(--accent-text)",
             }}
           >
             Featured
@@ -2196,7 +2204,7 @@ function WorkPage() {
             style={{
               fontFamily: SANS,
               fontSize: "0.6rem",
-              color: LIME,
+              color: "var(--accent-text)",
             }}
           >
             All Projects
@@ -2285,7 +2293,7 @@ function WorkPage() {
                     style={{
                       fontFamily: SANS,
                       fontSize: "0.58rem",
-                      color: LIME,
+                      color: "var(--accent-text)",
                     }}
                   >
                     {p.category} · {p.year}
@@ -2326,7 +2334,7 @@ function WorkPage() {
                 style={{
                   fontFamily: SANS,
                   fontSize: "clamp(3rem, 6vw, 5rem)",
-                  color: LIME,
+                  color: "var(--accent-text)",
                   lineHeight: 1,
                 }}
               >
@@ -2414,7 +2422,7 @@ function WorkPage() {
             style={{
               fontFamily: SANS,
               fontSize: "0.6rem",
-              color: LIME,
+              color: "var(--accent-text)",
             }}
           >
             Start a project
